@@ -2,10 +2,8 @@
 #include <boost/filesystem/fstream.hpp>
 #include <iostream>
 
-using namespace std;
-using namespace boost;
-void fs::writhToFile(string path, string desc){
-    filesystem::path p{path};
-    filesystem::ofstream ofs{p};
+void fs::writhToFile(std::string path, std::string desc){
+    boost::filesystem::path p{path};
+    boost::filesystem::ofstream ofs{p};
     ofs << desc;
 }
